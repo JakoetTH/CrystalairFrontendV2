@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/PassengerUsername"
+        android:hint="@string/PassengerUsername"
         android:ems="10"
         android:id="@+id/MainUsername"
         android:textSize="50sp"
@@ -27,7 +27,7 @@
         android:ems="10"
         android:id="@+id/MainPassword"
         android:textSize="50sp"
-        android:text="@string/PassengerPassword"
+        android:hint="@string/PassengerPassword"
         android:clickable="false"
         android:gravity="center"
         android:layout_alignTop="@+id/MainUsername"
@@ -44,7 +44,8 @@
         android:layout_below="@+id/MainPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="71dp"
-        android:background="@android:color/holo_blue_light" />
+        android:background="@android:color/holo_blue_light"
+        android:onClick="Login"/>
 
     <FrameLayout
         android:layout_width="match_parent"
