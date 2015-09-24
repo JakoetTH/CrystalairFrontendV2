@@ -8,8 +8,8 @@
     <string name="Login">Login</string>
     <string name="logo">Crystal Air</string>
     <string name="title_activity_passenger_details">PassengerDetails</string>
-    <string name="PassengerFlightsBtn">View My Flights</string>
-    <string name="PassengerTicketsBtn">Book Tickets</string>
+    <string name="PassengerFlightsBtn">Book Tickets</string>
+    <string name="PassengerTicketsBtn">Refund Ticket</string>
     <string name="title_activity_passenger_signup">PassengerSignup</string>
     <string name="PSUUsername">Username</string>
     <string name="PSUPassword">Password</string>
@@ -22,4 +22,6 @@
     <string name="BTflighthint">Select Flight Below</string>
     <string name="BThintclass">Select Class Below</string>
     <string name="BTbtnlabel">Purchase Ticket</string>
+    <string name="PDfirstnamelbl">First name</string>
+    <string name="PDusernamelbl">Username</string>
 </resources>

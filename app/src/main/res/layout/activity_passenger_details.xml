@@ -8,10 +8,10 @@
     android:background="@android:color/holo_blue_dark">
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="400dp"
         android:layout_height="100dp"
         android:text="@string/PassengerFlightsBtn"
-        android:id="@+id/PDFlightsBtn"
+        android:id="@+id/PDBookBtn"
         android:layout_marginLeft="102dp"
         android:layout_marginStart="102dp"
         android:clickable="true"
@@ -24,16 +24,67 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="350dp"
+        android:layout_width="400dp"
         android:layout_height="100dp"
         android:text="@string/PassengerTicketsBtn"
-        android:id="@+id/PDTicketsBtn"
+        android:id="@+id/PDRefundBtn"
         android:background="@android:color/holo_blue_light"
         android:textSize="40sp"
         android:layout_marginRight="109dp"
         android:layout_marginEnd="109dp"
-        android:layout_alignTop="@+id/PDFlightsBtn"
+        android:layout_alignTop="@+id/PDBookBtn"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:id="@+id/PDlisttickets"
+        android:background="@android:color/holo_blue_light"
+        android:layout_above="@+id/PDRefundBtn"
+        android:layout_alignRight="@+id/PDRefundBtn"
+        android:layout_alignEnd="@+id/PDRefundBtn"
+        android:layout_marginBottom="70dp" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:id="@+id/PDusername"
+        android:layout_marginTop="82dp"
+        android:textSize="50sp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignTop="@+id/PDlisttickets"
+        android:layout_alignRight="@+id/PDBookBtn"
+        android:layout_alignEnd="@+id/PDBookBtn" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:id="@+id/PDfirstname"
+        android:layout_alignBottom="@+id/PDlisttickets"
+        android:layout_alignLeft="@+id/PDBookBtn"
+        android:layout_alignStart="@+id/PDBookBtn"
+        android:textSize="50sp"
+        android:background="@android:color/holo_blue_light" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:text="@string/PDusernamelbl"
+        android:id="@+id/PDusernamelbl"
+        android:layout_alignTop="@+id/PDlisttickets"
+        android:layout_alignLeft="@+id/PDusername"
+        android:layout_alignStart="@+id/PDusername"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PDfirstnamelbl"
+        android:id="@+id/PDfirstnamelbl"
+        android:layout_below="@+id/PDusername"
+        android:layout_alignLeft="@+id/PDusername"
+        android:layout_alignStart="@+id/PDusername"
+        android:textSize="50sp" />
 
 </RelativeLayout>
