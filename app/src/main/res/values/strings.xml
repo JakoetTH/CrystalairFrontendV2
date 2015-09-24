@@ -10,4 +10,12 @@
     <string name="title_activity_passenger_details">PassengerDetails</string>
     <string name="PassengerFlightsBtn">View My Flights</string>
     <string name="PassengerTicketsBtn">Book Tickets</string>
+    <string name="title_activity_passenger_signup">PassengerSignup</string>
+    <string name="PSUUsername">Username</string>
+    <string name="PSUPassword">Password</string>
+    <string name="PSUhintfirstname">Firstname</string>
+    <string name="PSUhintlastname">Lastname</string>
+    <string name="PSUhintcontact">Contact Number</string>
+    <string name="PSUhintaddress">Address</string>
+    <string name="PSUsignupbtn">Sign Up</string>
 </resources>

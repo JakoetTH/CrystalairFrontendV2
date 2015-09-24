@@ -16,7 +16,6 @@
         android:id="@+id/MainUsername"
         android:textSize="50sp"
         android:gravity="center"
-        android:editable="true"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

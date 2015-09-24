@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.crystalair.crystalair.PassengerSignup"
+    android:background="@android:color/holo_blue_dark"
+    android:id="@+id/PSUMainLayout">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PSUUsername"
+        android:inputType="textPersonName"
+        android:hint="@string/PSUUsername"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/PSUPassword"
+        android:hint="@string/PSUPassword"
+        android:textSize="50sp"
+        android:layout_alignTop="@+id/PSUUsername"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentRight="true"
+        android:password="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/PSUhintfirstname"
+        android:inputType="textPersonName"
+        android:id="@+id/PSUFirstname"
+        android:layout_below="@+id/PSUUsername"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp"
+        android:textSize="50sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/PSUhintlastname"
+        android:inputType="textPersonName"
+        android:id="@+id/PSULastname"
+        android:layout_alignTop="@+id/PSUFirstname"
+        android:layout_alignLeft="@+id/PSUPassword"
+        android:layout_alignStart="@+id/PSUPassword"
+        android:textSize="50sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/PSUhintcontact"
+        android:inputType="textPersonName"
+        android:id="@+id/PSUContact"
+        android:layout_below="@+id/PSUFirstname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp"
+        android:textSize="50sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/PSUhintaddress"
+        android:inputType="textPersonName"
+        android:id="@+id/PSUAddress"
+        android:layout_alignTop="@+id/PSUContact"
+        android:layout_alignLeft="@+id/PSULastname"
+        android:layout_alignStart="@+id/PSULastname"
+        android:textSize="50sp" />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:text="@string/PSUsignupbtn"
+        android:id="@+id/PSUsignupbtn"
+        android:layout_below="@+id/PSUContact"
+        android:layout_toRightOf="@+id/PSUContact"
+        android:layout_toEndOf="@+id/PSUContact"
+        android:layout_marginTop="58dp"
+        android:textSize="40sp"
+        android:background="@android:color/holo_blue_light" />
+</RelativeLayout>
