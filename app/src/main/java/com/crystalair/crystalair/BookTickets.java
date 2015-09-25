@@ -1,5 +1,6 @@
 package com.crystalair.crystalair;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class BookTickets extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_tickets);
+        new HttpRequestTask().execute();
     }
 
     @Override
@@ -47,11 +49,9 @@ public class BookTickets extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void Login(View view)
+    public void BuyTicket(View view)
     {
-        //Intent intent = new Intent(this, PassengerDetails.class);
-        //startActivity(intent);
-        new HttpRequestTask().execute();
+
     }
 
     private class HttpRequestTask extends AsyncTask<Void, Void, List<Flight>> {
