@@ -36,11 +36,13 @@
         </activity>
         <activity
             android:name=".PassengerSignup"
-            android:label="@string/title_activity_passenger_signup" >
+            android:label="@string/title_activity_passenger_signup"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name=".BookTickets"
-            android:label="@string/title_activity_book_tickets" >
+            android:label="@string/title_activity_book_tickets"
+            android:screenOrientation="landscape" >
         </activity>
     </application>
 

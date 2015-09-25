@@ -71,4 +71,16 @@
             android:layout_gravity="top|center"
             android:textSize="70sp" />
     </FrameLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="@string/Mainsignupbtn"
+        android:id="@+id/MainSignupBtn"
+        android:onClick="toSignup"
+        android:layout_alignBottom="@+id/MainLoginBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_blue_light"
+        android:textSize="50sp" />
 </RelativeLayout>

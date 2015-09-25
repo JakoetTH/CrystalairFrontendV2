@@ -24,4 +24,5 @@
     <string name="BTbtnlabel">Purchase Ticket</string>
     <string name="PDfirstnamelbl">First name</string>
     <string name="PDusernamelbl">Username</string>
+    <string name="Mainsignupbtn">Sign Up</string>
 </resources>

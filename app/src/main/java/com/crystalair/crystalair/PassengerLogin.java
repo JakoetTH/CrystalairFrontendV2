@@ -15,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class PassengerLogin extends AppCompatActivity{
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,12 @@ public class PassengerLogin extends AppCompatActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void toSignup(View view)
+    {
+        Intent intent = new Intent(this, PassengerSignup.class);
+        startActivity(intent);
     }
 
     public void Login(View view)
