@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:text="@string/PassengerFlightsBtn"
         android:id="@+id/PDBookBtn"
+        android:onClick="BookTicket"
         android:layout_marginLeft="102dp"
         android:layout_marginStart="102dp"
         android:clickable="true"
@@ -28,6 +29,7 @@
         android:layout_height="100dp"
         android:text="@string/PassengerTicketsBtn"
         android:id="@+id/PDRefundBtn"
+        android:onClick="RefundTicket"
         android:background="@android:color/holo_blue_light"
         android:textSize="40sp"
         android:layout_marginRight="109dp"
@@ -39,7 +41,7 @@
     <ListView
         android:layout_width="400dp"
         android:layout_height="300dp"
-        android:id="@+id/PDlisttickets"
+        android:id="@+id/PDticketlist"
         android:background="@android:color/holo_blue_light"
         android:layout_above="@+id/PDRefundBtn"
         android:layout_alignRight="@+id/PDRefundBtn"
@@ -53,7 +55,7 @@
         android:layout_marginTop="82dp"
         android:textSize="50sp"
         android:background="@android:color/holo_blue_light"
-        android:layout_alignTop="@+id/PDlisttickets"
+        android:layout_alignTop="@+id/PDticketlist"
         android:layout_alignRight="@+id/PDBookBtn"
         android:layout_alignEnd="@+id/PDBookBtn" />
 
@@ -61,7 +63,7 @@
         android:layout_width="400dp"
         android:layout_height="70dp"
         android:id="@+id/PDfirstname"
-        android:layout_alignBottom="@+id/PDlisttickets"
+        android:layout_alignBottom="@+id/PDticketlist"
         android:layout_alignLeft="@+id/PDBookBtn"
         android:layout_alignStart="@+id/PDBookBtn"
         android:textSize="50sp"
@@ -72,7 +74,7 @@
         android:layout_height="60dp"
         android:text="@string/PDusernamelbl"
         android:id="@+id/PDusernamelbl"
-        android:layout_alignTop="@+id/PDlisttickets"
+        android:layout_alignTop="@+id/PDticketlist"
         android:layout_alignLeft="@+id/PDusername"
         android:layout_alignStart="@+id/PDusername"
         android:textSize="50sp" />

@@ -1,5 +1,8 @@
 package com.crystalair.crystalair;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
@@ -10,12 +13,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 public class PassengerLogin extends AppCompatActivity{
 
-
+    final Context context = this;
+    private Passenger pass;
+    private static final String Username = "Username";
+    private static final String Password = "Password";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +59,13 @@ public class PassengerLogin extends AppCompatActivity{
 
     public void Login(View view)
     {
-        //Intent intent = new Intent(this, PassengerDetails.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, PassengerDetails.class);
         new HttpRequestTask().execute();
+        if(pass!=null) {
+            intent.putExtra(Username, pass.getUserName());
+            intent.putExtra(Password, pass.getPassword());
+            startActivity(intent);
+        }
     }
 
     private class HttpRequestTask extends AsyncTask<Void, Void, Passenger> {
@@ -69,10 +80,19 @@ public class PassengerLogin extends AppCompatActivity{
                 String url = "http://crystalairdiy-redc.rhcloud.com/api/passenger?username=" + username + "&password=" + password;
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Passenger passenger = restTemplate.getForObject(url, Passenger.class);
-                return passenger;
+                return restTemplate.getForObject(url, Passenger.class);
             } catch (Exception e) {
                 Log.e("PassengerLogin", e.getMessage(), e);
+                /*AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+                alertDialog.setTitle("Invalid Login");
+                alertDialog.setMessage("Please make sure that your username and password are correct");
+                alertDialog.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                alertDialog.show();*/
             }
 
             return null;
@@ -80,8 +100,7 @@ public class PassengerLogin extends AppCompatActivity{
 
         @Override
         protected void onPostExecute(Passenger passenger) {
-            TextView textView = (TextView) findViewById(R.id.MainUsername);
-            textView.setText(passenger.getFirstName());
+            pass = passenger;
         }
 
     }

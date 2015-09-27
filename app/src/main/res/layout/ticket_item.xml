@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="Price: "
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="Ticket Class:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="Ticket ID: "
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="0.00"
+        android:id="@+id/lblTicketPrice"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="Class"
+        android:id="@+id/lblTicketClass"
+        android:layout_below="@+id/lblTicketPrice"
+        android:layout_alignLeft="@+id/lblTicketPrice"
+        android:layout_alignStart="@+id/lblTicketPrice"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="0"
+        android:id="@+id/lblTicketID"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:textSize="20sp" />
+</RelativeLayout>

@@ -11,8 +11,8 @@
     <string name="PassengerFlightsBtn">Book Tickets</string>
     <string name="PassengerTicketsBtn">Refund Ticket</string>
     <string name="title_activity_passenger_signup">PassengerSignup</string>
-    <string name="PSUUsername">Username</string>
-    <string name="PSUPassword">Password</string>
+    <string name="PSUhintusername">Username</string>
+    <string name="PSUhintpassword">Password</string>
     <string name="PSUhintfirstname">Firstname</string>
     <string name="PSUhintlastname">Lastname</string>
     <string name="PSUhintcontact">Contact Number</string>
@@ -25,4 +25,8 @@
     <string name="PDfirstnamelbl">First name</string>
     <string name="PDusernamelbl">Username</string>
     <string name="Mainsignupbtn">Sign Up</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_ticket_item">TicketItemActivity</string>
 </resources>

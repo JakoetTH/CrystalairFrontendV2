@@ -1,11 +1,16 @@
 package com.crystalair.crystalair;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import org.springframework.http.HttpEntity;
@@ -18,6 +23,8 @@ import org.springframework.web.client.RestTemplate;
 
 
 public class PassengerSignup extends AppCompatActivity {
+
+    private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +53,13 @@ public class PassengerSignup extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void Signup(View view)
+    {
+        new HttpRequestTask().execute();
+        finish();
+    }
+
     private class HttpRequestTask extends AsyncTask<Void, Void, String> {
 
         TextView viewUsername = (TextView) findViewById(R.id.PSUUsername);
@@ -63,8 +77,8 @@ public class PassengerSignup extends AppCompatActivity {
         @Override
         protected String doInBackground(Void... params) {
             try {
-                String url = "http://crystalairdiy-redc.rhcloud.com/api/passenger/create?username"
-                        + username + "&password=" + password + "&firstname=" + firstname + "$lastname="
+                String url = "http://crystalairdiy-redc.rhcloud.com/api/passenger/create?username="
+                        + username + "&password=" + password + "&firstname=" + firstname + "&lastname="
                         + lastname + "&address=" + address + "&contact=" + contact;
                 RestTemplate restTemplate = new RestTemplate();
                 HttpHeaders headers = new HttpHeaders();
@@ -74,7 +88,16 @@ public class PassengerSignup extends AppCompatActivity {
                 HttpStatus status = responseEntity.getStatusCode();
                     if(status == HttpStatus.CONFLICT)
                     {
-
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+                        alertDialog.setTitle("Invalid Username");
+                        alertDialog.setMessage("The username is already in use");
+                        alertDialog.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        alertDialog.show();
                     }
                     else
                     {

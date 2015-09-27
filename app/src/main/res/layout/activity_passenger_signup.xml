@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/PSUUsername"
         android:inputType="textPersonName"
-        android:hint="@string/PSUUsername"
+        android:hint="@string/PSUhintusername"
         android:textSize="50sp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentLeft="true" />
@@ -24,7 +24,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/PSUPassword"
-        android:hint="@string/PSUPassword"
+        android:hint="@string/PSUhintpassword"
         android:textSize="50sp"
         android:layout_alignTop="@+id/PSUUsername"
         android:layout_alignParentLeft="false"
@@ -89,5 +89,6 @@
         android:layout_toEndOf="@+id/PSUContact"
         android:layout_marginTop="58dp"
         android:textSize="40sp"
+        android:onClick="Signup"
         android:background="@android:color/holo_blue_light" />
 </RelativeLayout>
