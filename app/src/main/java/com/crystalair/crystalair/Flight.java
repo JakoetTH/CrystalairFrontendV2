@@ -10,8 +10,8 @@ import java.util.List;
 public class Flight implements FlightDisplay, Serializable{
 
     private Long id;
-    private Date departureTime;
-    private Date arrivalTime;
+    private Long departureTime;
+    private Long arrivalTime;
     private String departureLocation;
     private String arrivalLocation;
     private int seatsAvailable;
@@ -39,12 +39,12 @@ public class Flight implements FlightDisplay, Serializable{
         return this.id;
     }
     @Override
-    public Date getDepartureTime()
+    public Long getDepartureTime()
     {
         return this.departureTime;
     }
     @Override
-    public Date getArrivalTime()
+    public Long getArrivalTime()
     {
         return this.arrivalTime;
     }
@@ -82,8 +82,8 @@ public class Flight implements FlightDisplay, Serializable{
     public static class Builder
     {
         private Long id;
-        private Date departureTime;
-        private Date arrivalTime;
+        private Long departureTime;
+        private Long arrivalTime;
         private String departureLocation;
         private String arrivalLocation;
         private int seatsAvailable;
@@ -94,13 +94,13 @@ public class Flight implements FlightDisplay, Serializable{
             this.departureLocation=departureLocation;
         }
 
-        public Builder departureTime(Date departureTime)
+        public Builder departureTime(Long departureTime)
         {
             this.departureTime=departureTime;
             return this;
         }
 
-        public Builder arrivalTime(Date arrivalTime)
+        public Builder arrivalTime(Long arrivalTime)
         {
             this.arrivalTime=arrivalTime;
             return this;

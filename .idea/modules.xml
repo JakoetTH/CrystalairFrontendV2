@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/crystalairfrontendFinal.iml" filepath="$PROJECT_DIR$/crystalairfrontendFinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontendFinal.iml" filepath="$PROJECT_DIR$/frontendFinal.iml" />
     </modules>
   </component>
 </project>

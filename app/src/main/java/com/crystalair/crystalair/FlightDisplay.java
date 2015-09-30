@@ -8,8 +8,8 @@ import java.util.List;
  */
 public interface FlightDisplay {
     public Long getID();
-    public Date getDepartureTime();
-    public Date getArrivalTime();
+    public Long getDepartureTime();
+    public Long getArrivalTime();
     public String getDepartureLocation();
     public String getArrivalLocation();
     public int getSeatsAvailable();

@@ -33,9 +33,11 @@ public class PassengerDetails extends AppCompatActivity{
     private String passwordValue;
     private Passenger pass;
     private List<HashMap<String,String>> hashlist;
+    private HashMap<String, String> temphm;
     private List<Ticket> ticketlist;
     private ListView ticketsView;
     private Long refundID = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,8 @@ public class PassengerDetails extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                refundID = Long.parseLong(((TextView) findViewById(R.id.lblTicketID)).getText().toString());
+                temphm = hashlist.get(position);
+                refundID = Long.parseLong(temphm.get(varnameId));
                 //System.out.println(refundID);
                 //System.out.println(id);
                 //System.out.println(position);
@@ -90,6 +93,7 @@ public class PassengerDetails extends AppCompatActivity{
         intent.putExtra(Username, usernameValue);
         intent.putExtra(Password, passwordValue);
         startActivity(intent);
+        finish();
     }
 
     public void RefundTicket(View view)
@@ -169,7 +173,6 @@ public class PassengerDetails extends AppCompatActivity{
             TextView firstnameView = (TextView) findViewById(R.id.PDfirstname);
             firstnameView.setText(pass.getFirstName() + "");
             ticketlist = pass.getTickets();
-            HashMap<String, String> temphm;
             for (Ticket tick : ticketlist) {
                 temphm = new HashMap<String, String>();
                 temphm.put(varnamePrice, String.valueOf(tick.getPrice()));

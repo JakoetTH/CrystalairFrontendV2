@@ -26,7 +26,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/BTflightlistview"
         android:layout_alignStart="@+id/BTflightlistview"
-        android:layout_marginTop="64dp" />
+        android:layout_marginTop="64dp"
+        android:editable="false" />
 
     <ListView
         android:layout_width="500dp"
@@ -54,6 +55,7 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:text="@string/BTbtnlabel"
+        android:onClick="BuyTicket"
         android:id="@+id/BTbuybtn"
         android:textSize="50sp"
         android:background="@android:color/holo_blue_light"
